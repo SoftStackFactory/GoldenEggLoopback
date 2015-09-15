@@ -1,0 +1,33 @@
+{
+  "name": "casinoUser",
+  "base": "User",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "casinoId": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+      "casino": {
+       "type": "belongsTo",
+       "model": "casino",
+       "foreignKey": "casinoId"
+     }
+  },
+  "acls": [],
+  "methods": []
+}

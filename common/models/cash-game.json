@@ -1,0 +1,49 @@
+{
+  "name": "cashGame",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "style": {
+      "type": "string",
+      "required": true
+    },
+    "min": {
+      "type": "number",
+      "required": true
+    },
+    "max": {
+      "type": "number",
+      "required": true
+    },
+    "smallBlind": {
+      "type": "number",
+      "required": true
+    },
+    "bigBlind": {
+      "type": "number",
+      "required": true
+    },
+    "casinoId": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+       "casino": {
+         "type": "belongsTo",
+         "model": "casino",
+         "foreignKey": "casinoId"
+       }
+  },
+  "acls": [],
+  "methods": []
+}

@@ -1,0 +1,81 @@
+{
+  "name": "tournament",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "startTime": {
+      "type": "date",
+      "required": true
+    },
+    "reloadCost": {
+      "type": "string",
+      "required": true
+    },
+    "numReloads": {
+      "type": "number",
+      "required": true
+    },
+    "startStack": {
+      "type": "number",
+      "required": true
+    },
+    "reloadStack": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "comments": "Casino Name"
+    },
+    "style": {
+      "type": "string",
+      "comments": "Type of Poker game"
+    },
+    "regStart": {
+      "type": "date",
+      "required": true,
+      "comments": "Start of registration"
+    },
+    "regEnd": {
+      "type": "date",
+      "required": true,
+      "comments": "End of registration"
+    },
+    "numPlayers": {
+      "type": "number",
+      "comments": "How many players now"
+    },
+    "numTables": {
+      "type": "number",
+      "comments": "How many tables now"
+    },
+    "entryCost": {
+      "type": "string",
+      "required": true
+    },
+    "casinoId": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+        "blinds": {
+         "type": "hasMany",
+         "model": "blinds",
+         "foreignKey": "tournamentId"
+       },
+       "casino": {
+         "type": "belongsTo",
+         "model": "casino",
+         "foreignKey": "casinoId"
+       }
+  },
+  "acls": [],
+  "methods": []
+}

@@ -1,0 +1,30 @@
+{
+  "name": "subscription",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "casinoId": {
+      "type": "string",
+      "required": true
+    },
+    "playerId": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "player": {
+      "type": "belongsTo",
+      "model": "player",
+      "foreignKey": "playerId"
+    }
+    
+  },
+  "acls": [],
+  "methods": []
+}

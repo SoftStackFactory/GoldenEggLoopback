@@ -1,0 +1,36 @@
+{
+  "name": "blinds",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "tournamentId": {
+      "type": "string",
+      "required": true
+    },
+    "blindOrder": {
+      "type": "number",
+      "required": true
+    },
+    "levelMins": {
+      "type": "number",
+      "required": true
+    },
+    "small": {
+      "type": "number",
+      "required": true
+    },
+    "big": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+  },
+  "acls": [],
+  "methods": []
+}

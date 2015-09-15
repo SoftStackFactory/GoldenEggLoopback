@@ -1,0 +1,60 @@
+{
+  "name": "casino",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string",
+      "required": false
+    },
+    "zip": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "casinoUser": {
+     "type": "hasMany",
+     "model": "casinoUser",
+     "foreignKey": "casinoId"
+   },
+   "tournaments": {
+      "type": "hasMany",
+      "model": "tournaments",
+      "foreignKey": "casinoId"
+    },
+   "cashGames": {
+      "type": "hasMany",
+      "model": "cashGames",
+      "foreignKey": "casinoId"
+    },
+   "posts": {
+      "type": "hasMany",
+      "model": "posts",
+      "foreignKey": "casinoId"
+    },
+   "players": {
+      "type": "hasMany",
+      "model": "player",
+      "foreignKey": "casinoId",
+      "through": "subscription"
+    }
+
+  },
+  "acls": [],
+  "methods": []
+}

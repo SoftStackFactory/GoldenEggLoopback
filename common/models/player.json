@@ -1,0 +1,38 @@
+{
+  "name": "player",
+  "base": "User",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "hometown": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "location": {
+      "type": "GeoPoint"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "casino": {
+      "type": "hasMany",
+      "model": "casino",
+      "foreignKey": "playerId",
+      "through": "myCasino"
+    }},
+  "acls": [],
+  "methods": []
+}

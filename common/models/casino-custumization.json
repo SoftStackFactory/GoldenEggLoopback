@@ -1,0 +1,33 @@
+{
+  "name": "casinoCustumization",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "background": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "required": true
+    },
+    "casinoId": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+       "casino": {
+         "type": "belongsTo",
+         "model": "casino",
+         "foreignKey": "casinoId"
+       }
+  },
+  "acls": [],
+  "methods": []
+}

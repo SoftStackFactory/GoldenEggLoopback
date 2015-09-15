@@ -1,0 +1,33 @@
+{
+  "name": "posts",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "postDate": {
+      "type": "date",
+      "required": true
+    },
+    "casinoId": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+       "casino": {
+         "type": "belongsTo",
+         "model": "casino",
+         "foreignKey": "casinoId"
+       }
+  },
+  "acls": [],
+  "methods": []
+}
