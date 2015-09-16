@@ -27,11 +27,11 @@
   },
   "validations": [],
   "relations": {
-    "casino": {
+    "myCasino": {
       "type": "hasMany",
       "model": "casino",
       "foreignKey": "playerId",
-      "through": "myCasino"
+      "through": "subscription"
     }},
   "acls": [],
   "methods": []

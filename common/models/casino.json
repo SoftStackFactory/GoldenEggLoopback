@@ -47,7 +47,7 @@
       "model": "posts",
       "foreignKey": "casinoId"
     },
-   "players": {
+   "subscribers": {
       "type": "hasMany",
       "model": "player",
       "foreignKey": "casinoId",

@@ -42,13 +42,7 @@
     "$promise": {},
     "$resolved": true
   },
-  "myCasino": {
-    "dataSource": "mongo",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "subscription": {
+ "subscription": {
     "dataSource": "mongo",
     "public": true,
     "$promise": {},
